@@ -15,35 +15,36 @@
         android:layout_height="wrap_content"
         android:text="Start"
         android:id="@+id/btStart"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="148dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/btSettings" />
+        android:layout_alignEnd="@+id/btLeaderboard"
+        android:layout_alignStart="@+id/btLeaderboard" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
         android:id="@+id/btSettings"
+        android:layout_marginLeft="35dp"
         android:layout_below="@+id/btStart"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/btLeaderboard" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Leaderboard"
         android:id="@+id/btLeaderboard"
+        android:layout_marginLeft="35dp"
         android:layout_below="@+id/btSettings"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exit"
         android:id="@+id/btExit"
+        android:layout_marginLeft="35dp"
         android:layout_below="@+id/btLeaderboard"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/btLeaderboard" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

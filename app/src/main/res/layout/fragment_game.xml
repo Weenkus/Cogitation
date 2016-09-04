@@ -11,7 +11,12 @@
     <TextView
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:singleLine="true"
+        android:gravity="top|center_horizontal"
+        android:elegantTextHeight="true"
+        android:textSize="28sp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -27,8 +32,14 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="bottom|center_horizontal"
-        android:inputType="text"
         android:textStyle="normal"
         android:lines="1" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btTip"
+        android:layout_alignTop="@+id/tbAnswer"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

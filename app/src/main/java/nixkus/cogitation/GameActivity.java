@@ -3,23 +3,19 @@ package nixkus.cogitation;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,17 +48,6 @@ public class GameActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
     }
 
 
@@ -122,24 +107,51 @@ public class GameActivity extends AppCompatActivity {
             int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
             ImageView ivSign = (ImageView) rootView.findViewById(R.id.ivSign);
             int IMG_HIGH = 400, IMG_LENGTH = 300;
-
-
+            FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.btTip);
 
             switch (sectionNumber) {
                 case 1:
                     ivSign.setImageBitmap(decodeSampledBitmapFromResource(
                                     getResources(), R.drawable.sign1, IMG_HIGH, IMG_LENGTH)
                     );
+
+
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Snackbar.make(view, "\"If a man's wit be wandering, let him study the mathematics.\" - Francis Bacon", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
+                    });
+
                     break;
                 case 2:
                     ivSign.setImageBitmap(decodeSampledBitmapFromResource(
                             getResources(), R.drawable.sign2, IMG_HIGH, IMG_LENGTH)
                     );
+
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Snackbar.make(view, "\"Sailors on a becalmed sea, we sense the stirring of a breeze.\" - Carl Sagan", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
+                    });
+
                     break;
                 case 3:
                     ivSign.setImageBitmap(decodeSampledBitmapFromResource(
                             getResources(), R.drawable.sign3, IMG_HIGH, IMG_LENGTH)
                     );
+
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Snackbar.make(view, "\"A revolution is not a bed of roses.\" - Fidel Castro", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
+                        }
+                    });
+
                     break;
             }
 

@@ -2,5 +2,5 @@
     <string name="app_name">Cogitation</string>
     <string name="title_activity_game">GameActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Your are at your %1$d puzzle</string>
+    <string name="section_format">Puzzle number: %1$d</string>
 </resources>
